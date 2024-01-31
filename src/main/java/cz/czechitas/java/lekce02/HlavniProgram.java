@@ -95,48 +95,119 @@ public class HlavniProgram {
     }
   }
 
-
+  public void nakresliDomecek(){
+    zofka.turnRight(90);
+    for (int i = 0; i < 3; i++) {
+      zofka.move(150);
+      zofka.turnRight(90);
+    }
+    zofka.move(150);
+    zofka.turnRight(30);
+    zofka.move(150);
+    zofka.turnRight(120);
+    zofka.move(150);
+    zofka.turnLeft(60);
+    zofka.penUp();
+    zofka.move(80);
+    zofka.turnLeft(90);
+    zofka.penDown();
+  }
 
   public void start() {
     zofka = new Turtle();
 
-    // Žofka nakreslí prasátko
-    nakresliPrasatko();
-
-    // Žofka se posune
-    zofka.turnRight(90);
-    zofka.move(200);
-    zofka.turnLeft(90);
-    zofka.penDown();
-
-    // Žofka nakreslí osmiúhelník
-    nakresliOsmiuhelnik();
+//    // Žofka nakreslí prasátko
+//    nakresliPrasatko();
+//
+//    // Žofka se posune
+//    zofka.turnRight(90);
+//    zofka.move(200);
+//    zofka.turnLeft(90);
+//    zofka.penDown();
+//
+//    // Žofka nakreslí osmiúhelník
+//    nakresliOsmiuhelnik();
+//
+//    // Žofka se posune
+//    zofka.penUp();
+//    zofka.turnRight(90);
+//    zofka.move(200);
+//    zofka.turnLeft(90);
+//    zofka.move(15);
+//    zofka.penDown();
+//
+//    // Žofka nakreslí kolečko
+//    nakresliKolecko();
+//
+//    // Žofka se posune
+//    zofka.penUp();
+//    zofka.turnRight(90);
+//    zofka.move(200);
+//    zofka.turnLeft(90);
+//    zofka.penDown();
+//
+//    // Žofka nakreslí sluníčko
+//    nakresliSlunicko();
+//
+//    // Žofka se posune
+//    zofka.penUp();
+//    zofka.turnRight(90);
+//    zofka.move(100);
+//    zofka.turnLeft(90);
 
     // Žofka se posune
     zofka.penUp();
-    zofka.turnRight(90);
-    zofka.move(200);
     zofka.turnLeft(90);
-    zofka.move(15);
+    zofka.move(300);
+    zofka.turnRight(90);
+    zofka.move(250);
     zofka.penDown();
 
-    // Žofka nakreslí kolečko
-    nakresliKolecko();
-
-    // Žofka se posune
-    zofka.penUp();
-    zofka.turnRight(90);
-    zofka.move(200);
-    zofka.turnLeft(90);
-    zofka.penDown();
-
-    // Žofka nakreslí sluníčko
     nakresliSlunicko();
 
     // Žofka se posune
+    zofka.turnLeft(90);
+    zofka.penUp();
+    zofka.move(250);
+    zofka.turnLeft(90);
+    zofka.move(350);
+    zofka.turnLeft(180);
+    zofka.penDown();
+
+    nakresliDomecek();
+    nakresliDomecek();
+    nakresliDomecek();
+    nakresliDomecek();
+    nakresliDomecek();
+
+    // Žofka se posune
+    zofka.penUp();
+    zofka.turnLeft(90);
+    zofka.move(220*5 + 50);
+    zofka.turnLeft(90);
+    zofka.move(350);
+    zofka.turnLeft(180);
+    zofka.penDown();
+
+    nakresliDomecek();
+
+    // Žofka se posune
     zofka.penUp();
     zofka.turnRight(90);
-    zofka.move(100);
+    zofka.move(200);
     zofka.turnLeft(90);
+    zofka.move(50);
+    zofka.penDown();
+
+    nakresliPrasatko();
+
+    // Žofka se posune/
+    zofka.turnRight(90);
+    zofka.move(200);
+    zofka.turnLeft(90);
+    zofka.move(100);
+    zofka.penDown();
+
+    nakresliDomecek();
   }
 }
