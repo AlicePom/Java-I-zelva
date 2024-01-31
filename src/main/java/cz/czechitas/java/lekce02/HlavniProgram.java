@@ -67,6 +67,7 @@ public class HlavniProgram {
     zofka.turnLeft(90);
   }
 
+
    public void start() {
     zofka = new Turtle();
     nakresliPrasatko();
