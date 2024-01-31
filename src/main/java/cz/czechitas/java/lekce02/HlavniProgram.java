@@ -67,9 +67,76 @@ public class HlavniProgram {
     zofka.turnLeft(90);
   }
 
+  public void nakresliOsmiuhelnik(){
+    for (int i = 0; i < 8; i++) {
+      zofka.move(50);
+      zofka.turnLeft(180 - ((360*3)/8));
+    }
+  }
 
-   public void start() {
+  public void nakresliKolecko(){
+    for (int i = 0; i < (360/6); i++) {
+      zofka.move(6);
+      zofka.turnLeft(6);
+    }
+  }
+
+  public void nakresliSlunicko(){
+    for (int i = 0; i < (360/30); i++) {
+      for (int j = 0; j < 5; j++){
+        zofka.move(6);
+        zofka.turnLeft(6);
+      }
+      zofka.turnRight(90);
+      zofka.move(24);
+      zofka.turnLeft(180);
+      zofka.move(24);
+      zofka.turnRight(90);
+    }
+  }
+
+
+
+  public void start() {
     zofka = new Turtle();
+
+    // Žofka nakreslí prasátko
     nakresliPrasatko();
+
+    // Žofka se posune
+    zofka.turnRight(90);
+    zofka.move(200);
+    zofka.turnLeft(90);
+    zofka.penDown();
+
+    // Žofka nakreslí osmiúhelník
+    nakresliOsmiuhelnik();
+
+    // Žofka se posune
+    zofka.penUp();
+    zofka.turnRight(90);
+    zofka.move(200);
+    zofka.turnLeft(90);
+    zofka.move(15);
+    zofka.penDown();
+
+    // Žofka nakreslí kolečko
+    nakresliKolecko();
+
+    // Žofka se posune
+    zofka.penUp();
+    zofka.turnRight(90);
+    zofka.move(200);
+    zofka.turnLeft(90);
+    zofka.penDown();
+
+    // Žofka nakreslí sluníčko
+    nakresliSlunicko();
+
+    // Žofka se posune
+    zofka.penUp();
+    zofka.turnRight(90);
+    zofka.move(100);
+    zofka.turnLeft(90);
   }
 }
